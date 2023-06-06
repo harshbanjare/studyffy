@@ -19,7 +19,7 @@ body {
   display: flex;
   position: relative;
   flex-direction: row;
-  height: 90vh;
+  min-height: 90vh;
   /* background: url("https://static.vecteezy.com/system/resources/previews/020/277/206/original/learning-english-doodle-set-language-school-in-sketch-style-online-language-education-course-hand-drawn-illustration-isolated-on-white-background-vector.jpg");
   background-size: 60%;
    */
@@ -209,6 +209,21 @@ body {
   transform: translate(0, 30%) scale(1);
 }
 
+@media screen and (max-width: 768px) {
+  .points {
+    padding: 1rem !important;
+  }
+  .pricing {
+    padding: 1rem !important;
+  }
+  .teachers {
+    padding: 1rem !important;
+  }
+
+  .students-feedback {
+    padding: 1rem !important;
+  }
+}
 .points {
   padding: 5rem;
   /* background: linear-gradient(
