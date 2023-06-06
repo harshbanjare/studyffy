@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+
   font-family: "Montserrat", sans-serif;
 }
 
@@ -365,6 +367,7 @@ body {
   padding: 1rem 0;
   /* background: rgba(200, 200, 200, 0.748); */
   border-radius: 8px;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -457,4 +460,246 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.teachers {
+  padding: 5rem;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  /* background: #83eaf11a; */
+  position: relative;
+}
+
+.teachers .bg-line {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform: skew(0, 25deg);
+  /* background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(95, 209, 249) 0%,
+    rgb(85, 88, 218) 100.2%
+  ); */
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(95, 209, 249) 0%,
+    rgb(85, 88, 218) 100.2%
+  );
+  /* background: linear-gradient(to right, #0acffe 0%, #495aff 100%); */
+
+  z-index: -10;
+}
+
+.teachers .heading {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  /* z-index: 1; */
+}
+
+.teachers .teacher-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem; */
+  padding: 1rem 0;
+  /* background: rgba(200, 200, 200, 0.748); */
+  border-radius: 8px;
+  /* z-index: 1; */
+}
+
+@media screen and (max-width: 768px) {
+  .teachers .teacher-card-container {
+    flex-direction: column;
+  }
+  .teachers .teacher-card-container .teacher-card {
+    margin: 1rem 0;
+  }
+}
+
+.teachers .teacher-card-container .teacher-card {
+  display: flex;
+  margin-right: 1rem;
+  /* transform-style: preserve-3d; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* z-index: 1; */
+  /* border: 1px solid #000000; */
+}
+
+.teachers .teacher-card-container .teacher-card .pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  /* z-index: 1; */
+  /* transform: translateZ(20px); */
+}
+
+.teachers .teacher-card-container .teacher-card .pic-container img {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  /* z-index: 1; */
+}
+
+.teachers .teacher-card-container .teacher-card .teacher-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  /* z-index: 1; */
+}
+
+.students-feedback {
+  padding: 5rem;
+  display: flex;
+  margin: 5rem 0 0 0;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  /* background: #83eaf11a; */
+  position: relative;
+  background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  color: white;
+}
+
+.students-feedback .heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  /* z-index: 1; */
+}
+
+.students-feedback .sub-heading {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  /* z-index: 1; */
+}
+
+.students-feedback .feedback-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  padding: 2rem;
+  /* background: #ffffffe5; */
+  border-radius: 8px;
+  /* z-index: 1; */
+  /* transform: translateZ(20px); */
+}
+
+.carousel-card {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 1rem;
+  /* background: #ffffff; */
+  /* background-color: #5ca0f2; */
+  background-color: #ffffff;
+  /* background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-height: 250px;
+  border-radius: 8px;
+  transform: scale(0.95);
+  /* z-index: 1; */
+  /* transform: translateZ(20px); */
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-card {
+    flex-direction: column;
+  }
+  .carousel-card .feedback-video {
+    margin: 1rem 0;
+  }
+}
+
+.carousel-card .feedback-video {
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+
+.carousel-card .feedback-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-card .feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  max-width: 400px;
+}
+
+.carousel-card .feedback .picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.carousel-card .feedback .picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-card .feedback .name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-bottom: 0.8rem;
+  z-index: 1;
+}
+
+.carousel-card .feedback .designation {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(88, 88, 88);
+  z-index: 1;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.carousel-card .feedback .testimonial {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  z-index: 1;
 }
