@@ -85,19 +85,22 @@
       <div class="app">
         <div class="meta-container">
           <div class="question-no">
-            <span>Question 1 of 10</span>
+            <span
+              >Question <span id="question_number">1</span> of
+              <span id="total_questions">10</span></span
+            >
           </div>
           <div class="quiz-name">
             <span>English Quiz</span>
           </div>
           <div class="timer">
-            <span>Time left: <span class="time">00:00</span></span>
+            <span>Time left: <span class="time" id="time">00:00</span></span>
           </div>
         </div>
 
         <div class="quiz-container">
           <div class="question-box">
-            <span class="question">
+            <span class="question" id="question_text">
               Choose the correct verb to complete the sentence: "I _____ TV
               every day."
             </span>
@@ -105,34 +108,48 @@
 
           <div class="option-box">
             <div class="option">
-              <input type="radio" name="option" id="option1" />
+              <input type="radio" name="option" id="option1" value="0" />
               <label for="option1">Watch</label>
             </div>
             <div class="option">
-              <input type="radio" name="option" id="option2" />
+              <input type="radio" name="option" id="option2" value="1" />
               <label for="option2">Watches</label>
             </div>
             <div class="option">
-              <input type="radio" name="option" id="option3" />
+              <input type="radio" name="option" id="option3" value="2" />
               <label for="option3">Watching</label>
             </div>
             <div class="option">
-              <input type="radio" name="option" id="option4" />
+              <input type="radio" name="option" id="option4" value="3" />
               <label for="option4">Watched</label>
             </div>
           </div>
         </div>
 
         <div class="quiz-controller">
-          <button class="previous">Previous</button>
-          <button class="next">Next</button>
-          <button class="submit">Submit</button>
+          <button class="previous" id="prev">Previous</button>
+          <button class="next" id="next">Next</button>
+          <button class="submit" id="submit">Submit</button>
         </div>
       </div>
     </div>
 
+    <dialog id="result" class="resulr">
+      <div class="score">
+        <span
+          >You scored <span id="score">0</span> out of
+          <span id="total">0</span></span
+        >
+      </div>
+
+      <div class="button-container">
+        <a href="test.html"><button id="restart">Restart</button></a>
+        <a href="/"><button id="view_answer">Home</button></a>
+      </div>
+    </dialog>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/nav.js"></script>
-    <script></script>
+    <script src="scripts/test.js"></script>
   </body>
 </html>
