@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../assets/images/herobg.png");
+  background-position: center;
+  background-size: 20%;
+  /* height: calc(100vh - 4rem); */
+  /* overflow: hidden; */
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  min-height: 100%;
+  padding: 2rem;
+  /* height: 100vh; */
+  background: rgba(255, 255, 255, 0.94);
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+}
+.app-container {
+  max-width: 100%;
+}
+.meta-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(36, 207, 255, 0.7);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  /* margin-top: 10%; */
+  border-radius: 8px;
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.meta-container .question-no {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.meta-container .quiz-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.meta-container .timer {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.meta-container .timer .time {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  /* .meta-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+  .meta-container .question-no {
+    font-size: 0.8rem;
+  }
+  .meta-container .quiz-name {
+    font-size: 0.8rem;
+  }
+  .meta-container .timer {
+    font-size: 0.8rem;
+  }
+  .meta-container .timer .time {
+    font-size: 0.8rem;
+  }
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(246, 246, 246, 0.75);
+  padding: 1.2rem;
+  /* margin-top: 10%; */
+  border-radius: 8px;
+  border: 2px solid rgb(232, 232, 232);
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.quiz-container .question-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(246, 246, 246, 0.7); */
+  padding: 1.2rem;
+  /* margin-top: 10%; */
+  border-radius: 8px;
+  /*  */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.quiz-container .question-box .question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.quiz-container .option-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  /* background: rgba(246, 246, 246, 0.7); */
+  padding: 1.2rem;
+  /* margin-top: 10%; */
+  border-radius: 8px;
+  /*  */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.quiz-container .option-box .option {
+  width: 40%;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(246, 246, 246, 0.7); */
+  padding: 1.2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  /*  */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* border: 2px solid rgb(83, 209, 255); */
+}
+
+.quiz-container .option-box .option label {
+  font-size: 1rem;
+  font-weight: 600;
+  /* margin-bottom: 1rem; */
+  cursor: pointer;
+}
+
+.quiz-controller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* background: rgba(36, 207, 255, 0.7); */
+  padding: 1.2rem 0;
+  margin: 1rem 0;
+  /* margin-top: 10%; */
+  border-radius: 8px;
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.quiz-controller button {
+  padding: 1rem 1rem;
+  margin: 0.1rem;
+  width: 30%;
+  min-width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgb(0, 200, 255);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .quiz-controller button {
+    font-size: 1rem;
+  }
+}
+.quiz-controller button:hover {
+  background: rgb(0, 180, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
