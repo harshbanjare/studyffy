@@ -22,12 +22,10 @@ body {
   vertical-align: top;
   min-height: 100%;
   padding: 2rem;
-  /* height: 100vh; */
   background: rgba(255, 255, 255, 0.94);
 }
 
 .app {
-  /* display: flex; */
 
   min-height: 100%;
   width: 90%;
