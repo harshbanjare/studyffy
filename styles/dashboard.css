@@ -154,13 +154,31 @@ body {
   margin-left: 2rem;
 }
 
-.main .heading {
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: flex !important;
+}
+
+.main .profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 90%; */
+  width: 100%;
+}
+
+.profile-container .heading {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10%;
   width: 100%;
   font-size: 2rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   color: rgb(0, 0, 0);
 }
@@ -228,6 +246,190 @@ body {
 }
 
 .profile-table > table > tbody > tr > td:nth-child(2) {
+  text-align: right;
+  max-width: 500px;
+}
+
+.class-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 90%; */
+  width: 100%;
+}
+
+.class-container .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.class-container .meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.class-container > .meta > .month-year {
+  margin-right: 1rem;
+}
+
+.class-container > .meta > .month-year > select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  border: 1px solid rgb(129, 129, 129);
+  outline: none;
+}
+
+.class-container > .meta > .month-year > select:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.class-container > .meta > .month-year > button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  border: 1px solid rgb(129, 129, 129);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.class-container > .calender-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  width: 100%;
+  /* padding: 2rem 1rem; */
+  box-sizing: border-box;
+}
+
+.class-container > .calender-container > .day {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 250px; */
+  width: 60%;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  /* padding: 1rem; */
+  border: 1px solid rgb(129, 129, 129);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.class-container > .calender-container > .day > .date-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  border-right: 1px solid rgb(129, 129, 129);
+  background-color: aliceblue;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  font-weight: 600;
+}
+
+.class-container > .calender-container > .day > .class-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: rgb(255, 255, 255);
+}
+
+.class-container > .calender-container > .day > .class-data-container > table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 20px;
+}
+
+.class-container
+  > .calender-container
+  > .day
+  > .class-data-container
+  > table
+  > thead
+  > tr
+  > th {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+
+.class-container
+  > .calender-container
+  > .day
+  > .class-data-container
+  > table
+  > tbody
+  > tr
+  > td {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+
+.class-container
+  > .calender-container
+  > .day
+  > .class-data-container
+  > table
+  > tbody
+  > tr
+  > td:nth-child(1) {
+  text-align: left;
+  min-width: 200px;
+}
+
+.class-container
+  > .calender-container
+  > .day
+  > .class-data-container
+  > table
+  > tbody
+  > tr
+  > td:nth-child(2) {
   text-align: right;
   max-width: 500px;
 }

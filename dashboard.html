@@ -97,60 +97,230 @@
           </div>
           <div class="menu">
             <ul>
-              <li class="active">
+              <li class="active" id="profile_btn">
                 <a href="dashboard.html#profile">My Profile</a>
               </li>
-              <li><a href="dashboard.html#classes">My Classes</a></li>
-              <li><a href="dashboard.html#attendance">My Attendance</a></li>
+              <li id="class_btn">
+                <a href="dashboard.html#classes">My Classes</a>
+              </li>
               <li><a href="dashboard.html#logout">Logout</a></li>
             </ul>
           </div>
         </div>
         <div class="main">
-          <div class="heading">My Profile</div>
-          <div class="profile-img">
-            <img src="assets/images/userpfpbg.png" alt="profile pic" />
+          <div class="profile-container" id="profile_view">
+            <div class="heading">My Profile</div>
+            <div class="profile-img">
+              <img src="assets/images/userpfpbg.png" alt="profile pic" />
+            </div>
+
+            <div class="profile-table">
+              <table>
+                <tr>
+                  <td>Name</td>
+                  <td>John Doe</td>
+                </tr>
+                <tr>
+                  <td>Roll No.</td>
+                  <td>123456789</td>
+                </tr>
+                <tr>
+                  <td>Payment Status</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>Plan</td>
+                  <td>Standard</td>
+                </tr>
+                <tr>
+                  <td>Address</td>
+                  <td>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, quibusdam.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phone No.</td>
+                  <td>1234567890</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>mail@test.com</td>
+                </tr>
+              </table>
+            </div>
           </div>
 
-          <div class="profile-table">
-            <table>
-              <tr>
-                <td>Name</td>
-                <td>John Doe</td>
-              </tr>
-              <tr>
-                <td>Roll No.</td>
-                <td>123456789</td>
-              </tr>
-              <tr>
-                <td>Payment Status</td>
-                <td>Pending</td>
-              </tr>
-              <tr>
-                <td>Plan</td>
-                <td>Standard</td>
-              </tr>
-              <tr>
-                <td>Address</td>
-                <td>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, quibusdam.
-                </td>
-              </tr>
-              <tr>
-                <td>Phone No.</td>
-                <td>1234567890</td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td>mail@test.com</td>
-              </tr>
-            </table>
+          <div class="class-container hide" id="class_view">
+            <div class="heading">My Classes</div>
+            <div class="meta">
+              <div class="month-year">
+                <select name="month" id="month">
+                  <option value="jan">January</option>
+                  <option value="feb">February</option>
+                  <option value="mar">March</option>
+                  <option value="apr">April</option>
+                  <option value="may">May</option>
+                  <option value="jun" selected>June</option>
+                  <option value="jul">July</option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+                </select>
+
+                <select name="year" id="year">
+                  <option value="2023">2023</option>
+                </select>
+
+                <button class="today">Today</button>
+              </div>
+            </div>
+
+            <div class="calender-container">
+              <div class="day" id="day1">
+                <div class="date-cont">
+                  <div class="date">1</div>
+                  <div class="month">June</div>
+                </div>
+                <div class="class-data-container">
+                  <table>
+                    <tr>
+                      <td>Class link</td>
+                      <td>
+                        <a
+                          href="https://meet.google.com/hik-wgky-ijc"
+                          target="_blank"
+                          >https://meet.google.com/hik-wgky-ijc</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Class time</td>
+                      <td>10:00 AM - 11:00 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Teacher</td>
+                      <td>Jane Doe</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="day" id="day1">
+                <div class="date-cont">
+                  <div class="date">2</div>
+                  <div class="month">June</div>
+                </div>
+                <div class="class-data-container">
+                  <table>
+                    <tr>
+                      <td>Class link</td>
+                      <td>
+                        <a
+                          href="https://meet.google.com/hik-wgky-ijc"
+                          target="_blank"
+                          >https://meet.google.com/hik-wgky-ijc</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Class time</td>
+                      <td>10:00 AM - 11:00 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Teacher</td>
+                      <td>Jane Doe</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="day" id="day1">
+                <div class="date-cont">
+                  <div class="date">3</div>
+                  <div class="month">June</div>
+                </div>
+                <div class="class-data-container">
+                  <table>
+                    <tr>
+                      <td>Class link</td>
+                      <td>
+                        <a
+                          href="https://meet.google.com/hik-wgky-ijc"
+                          target="_blank"
+                          >https://meet.google.com/hik-wgky-ijc</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Class time</td>
+                      <td>10:00 AM - 11:00 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Teacher</td>
+                      <td>Jane Doe</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="day" id="day1">
+                <div class="date-cont">
+                  <div class="date">4</div>
+                  <div class="month">June</div>
+                </div>
+                <div class="class-data-container">
+                  <table>
+                    <tr>
+                      <td>Class link</td>
+                      <td>
+                        <a
+                          href="https://meet.google.com/hik-wgky-ijc"
+                          target="_blank"
+                          >https://meet.google.com/hik-wgky-ijc</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Class time</td>
+                      <td>10:00 AM - 11:00 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Teacher</td>
+                      <td>Jane Doe</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="day" id="day1">
+                <div class="date-cont">
+                  <div class="date">5</div>
+                  <div class="month">June</div>
+                </div>
+                <div class="class-data-container">
+                  <table>
+                    <tr>
+                      <td>Class link</td>
+                      <td>TBA</td>
+                    </tr>
+                    <tr>
+                      <td>Class time</td>
+                      <td>TBA</td>
+                    </tr>
+                    <tr>
+                      <td>Teacher</td>
+                      <td>TBA</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/dashboard.js"></script>
   </body>
 </html>
