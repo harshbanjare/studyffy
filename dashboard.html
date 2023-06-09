@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Studyffy</title>
+    <title>Studyffy | Students Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <!-- query-->
   </head>
@@ -80,51 +80,76 @@
       </div>
     </div>
 
-    <div class="body-wrapper">
-      <div class="login-container">
-        <div class="right"></div>
-        <div class="left">
-          <div class="logo-container">
-            <img src="assets/images/logosmall.JPG" alt="logo" />
-          </div>
-
-          <div class="heading">
-            <h1>Log In</h1>
-          </div>
-
-          <div class="login-form">
-            <div class="field-container">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                ="email"
-                id="email"
+    <div class="dashboard-container">
+      <div class="dashboard">
+        <div class="sidebar">
+          <div class="profile">
+            <div class="profile-pic">
+              <img
+                src="assets/images/userpfpbg.png"
+                width="100"
+                ="profile pic"
               />
             </div>
-
-            <div class="field-container">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                name="password"
-                id="password"
-              />
-            </div>
-
-            <div class="field-container">
-              <button class="login-btn">Log In</button>
+            <div class="profile-name">
+              <h3>John Doe</h3>
             </div>
           </div>
-          <div class="no-account">
-            <span>Don't have an account?</span>
-            <a href="signup.html">Sign Up</a>
+          <div class="menu">
+            <ul>
+              <li class="active">
+                <a href="dashboard.html#profile">My Profile</a>
+              </li>
+              <li><a href="dashboard.html#classes">My Classes</a></li>
+              <li><a href="dashboard.html#attendance">My Attendance</a></li>
+              <li><a href="dashboard.html#logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main">
+          <div class="heading">My Profile</div>
+          <div class="profile-img">
+            <img src="assets/images/userpfpbg.png" alt="profile pic" />
+          </div>
+
+          <div class="profile-table">
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Roll No.</td>
+                <td>123456789</td>
+              </tr>
+              <tr>
+                <td>Payment Status</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>Plan</td>
+                <td>Standard</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, quibusdam.
+                </td>
+              </tr>
+              <tr>
+                <td>Phone No.</td>
+                <td>1234567890</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>mail@test.com</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/nav.js"></script>
   </body>

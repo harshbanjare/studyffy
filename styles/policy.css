@@ -162,7 +162,7 @@ body {
 .footer .quick-links .links a {
   font-size: 0.8rem;
   font-weight: 400;
-  /* color: rgb(177, 177, 177); */
+  color: rgb(177, 177, 177);
   margin-bottom: 0.8rem;
   text-align: center;
   text-decoration: none;

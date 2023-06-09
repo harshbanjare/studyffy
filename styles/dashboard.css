@@ -1,0 +1,233 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 90vh; */
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: stretch;
+  /* justify-content: center; */
+  height: 100%;
+  width: 100%;
+  background: rgba(220, 220, 220, 0.5);
+}
+
+.dashboard .sidebar {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  /* height: 100%; */
+  width: 20%;
+  min-width: 200px;
+  background: rgba(0, 150, 150, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.sidebar .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.profile .profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 50%; */
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid rgb(129, 129, 129);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+}
+.profile .profile-pic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile .profile-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.dashboard .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 80%; */
+  width: 100%;
+  border-radius: 20px;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 90%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu ul li.active {
+  background: rgba(0, 0, 0, 0.3);
+  color: white !important;
+}
+.menu ul li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.menu ul li.active a {
+  color: white !important;
+}
+
+.dashboard .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin-left: 2rem;
+}
+
+.main .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.main .profile-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 50%; */
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(129, 129, 129);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.main .profile-img img {
+  height: 100%;
+  width: 100%;
+  /* border-radius: 20px; */
+}
+
+.profile-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 80%; */
+  /* width: 100%; */
+  border-radius: 20px;
+  padding: 1rem;
+  /* border: 1px solid rgb(129, 129, 129); */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.profile-table > table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 20px;
+}
+
+.profile-table > table > thead > tr > th {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+
+.profile-table > table > tbody > tr > td {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+
+.profile-table > table > tbody > tr > td:nth-child(1) {
+  text-align: left;
+  min-width: 200px;
+}
+
+.profile-table > table > tbody > tr > td:nth-child(2) {
+  text-align: right;
+  max-width: 500px;
+}
