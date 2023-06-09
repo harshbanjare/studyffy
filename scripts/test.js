@@ -220,8 +220,6 @@ const setQuestion = (index) => {
   document.getElementById("total_questions").innerHTML = questions.length;
 };
 
-const calculateScore = () => {};
-
 window.onload = () => {
   start();
 
@@ -232,4 +230,7 @@ window.onload = () => {
   document.getElementById("next").addEventListener("click", nextQuestion);
   document.getElementById("prev").addEventListener("click", prevQuestion);
   document.getElementById("submit").addEventListener("click", end);
+};
+window.onbeforeunload = function () {
+  return "Are you sure you want to leave?";
 };

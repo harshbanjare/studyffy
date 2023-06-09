@@ -1,0 +1,220 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.footer {
+  padding: 1rem;
+  display: flex;
+  margin: 5rem 0 0 0;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #000000;
+  color: #ffffff;
+  max-height: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer .about {
+    width: 100% !important;
+  }
+
+  .footer .contact {
+    width: 100% !important;
+  }
+  .footer .quick-links {
+    width: 100% !important;
+  }
+}
+
+.footer .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem;
+  width: 20%;
+}
+
+.footer .about .logo {
+  height: 80px;
+  /* width: 80px; */
+  /* border-radius: 50%; */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.footer .about .logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer .about .description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(177, 177, 177);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .about .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  width: 100%;
+}
+
+.footer .about .socials a {
+  margin: 0 0.5rem;
+}
+
+.footer .about .socials a img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+
+.footer .about .copyright {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(177, 177, 177);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem;
+  width: 20%;
+}
+
+.footer .contact .heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(177, 177, 177);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .contact .email {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(177, 177, 177);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .contact .address {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(177, 177, 177);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .quick-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem;
+  width: 20%;
+}
+
+.footer .quick-links .heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* color: rgb(177, 177, 177); */
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.footer .quick-links .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+
+.footer .quick-links .links a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  /* color: rgb(177, 177, 177); */
+  margin-bottom: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+main {
+  /* margin-top: 5rem; */
+  /* margin-bottom: 5rem; */
+  padding: 2rem 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 2rem 1rem;
+  }
+}
+
+main .heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* color: rgb(177, 177, 177); */
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+main .description p {
+  font-size: 1rem;
+  font-weight: 400;
+  /* color: rgb(177, 177, 177); */
+  margin-bottom: 0.8rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+main .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+
+main .list ol {
+  padding: 0;
+  margin: 0;
+}
+
+main .list ol li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  /* color: rgb(177, 177, 177); */
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
