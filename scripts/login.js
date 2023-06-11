@@ -40,7 +40,7 @@ const login = async (event) => {
       document.location.replace("dashboard.html");
     }
   } else {
-    alert("Please fill all the fields");
+    alert("Please fill all the  fields");
     enable_button();
   }
 };
@@ -49,6 +49,5 @@ window.addEventListener("load", () => {
   if (localStorage.getItem("token")) {
     document.location.replace("dashboard.html");
   }
-
   document.querySelector("#loginButton").addEventListener("click", login);
 });
