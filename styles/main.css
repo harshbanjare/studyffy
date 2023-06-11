@@ -464,8 +464,16 @@ body {
   border-radius: 8px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
-
-.pricing .pricing-card-container .pricing-card .pricing-foot .purchase-btn {
+.pricing .pricing-card-container .pricing-card .pricing-foot .pricing-link {
+  color: #fff;
+  text-decoration: none;
+}
+.pricing
+  .pricing-card-container
+  .pricing-card
+  .pricing-foot
+  .pricing-link
+  .purchase-btn {
   padding: 1rem 2rem;
   background: rgb(0, 0, 0);
   color: white;

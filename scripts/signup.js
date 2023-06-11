@@ -37,7 +37,15 @@ const register = async (event) => {
       enable_button();
     } else {
       alert("Account Created Successfully");
-      document.location.replace("login.html");
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirect_url = urlParams.get("redirect");
+      if (redirect_url) {
+        console.log("redirecting to " + redirect_url);
+        document.location.replace(redirect_url);
+      } else {
+        document.location.replace("login.html");
+      }
     }
   } else {
     enable_button();

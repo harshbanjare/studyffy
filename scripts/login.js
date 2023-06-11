@@ -37,7 +37,15 @@ const login = async (event) => {
       console.log(data);
       localStorage.setItem("token", data.token);
 
-      document.location.replace("dashboard.html");
+      //check url params for redirect url
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirect_url = urlParams.get("redirect");
+      if (redirect_url) {
+        console.log("redirecting to " + redirect_url);
+        document.location.replace(redirect_url);
+      } else {
+        document.location.replace("dashboard.html");
+      }
     }
   } else {
     alert("Please fill all the  fields");
@@ -49,5 +57,10 @@ window.addEventListener("load", () => {
   if (localStorage.getItem("token")) {
     document.location.replace("dashboard.html");
   }
+
+  const signup_link = document.querySelector("#signup_page_link");
+  signup_link.href = `signup.html?redirect=${
+    location.pathname + location.search
+  }`;
   document.querySelector("#loginButton").addEventListener("click", login);
 });

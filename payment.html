@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/payment.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <!-- query-->
   </head>
@@ -78,45 +78,37 @@
     </div>
 
     <div class="body-wrapper">
-      <div class="login-container">
-        <div class="right"></div>
+      <div class="payment-container">
+        <div class="right">
+          <img
+            src="assets/images/qr.jpeg"
+            width="300px"
+            alt="UPI QR CODE"
+            class="qr"
+          />
+        </div>
         <div class="left">
-          <div class="logo-container">
-            <img src="assets/images/logosmall.JPG" alt="logo" />
+          <h1>Payment</h1>
+          <div class="instructions">
+            In Order to complete the payment, please scan the QR code, pay the
+            total amount and enter the UPI transaction ID below. <br />
+            Once we have verified the payment on our end, you will be able to
+            access your classes.
           </div>
-
-          <div class="heading">
-            <h1>Log In</h1>
+          <div class="selected-plan">Plan: <span id="plan">Basic</span></div>
+          <div class="total-amount">Amount: <span id="amount">₹ 100</span></div>
+          <div class="field-container">
+            <label for="upi-id">UPI Transcation ID</label>
+            <input type="text" name="upi-id" id="transaction_id" />
           </div>
-
-          <div class="login-form">
-            <div class="field-container">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                ="email"
-                id="email"
-              />
-            </div>
-
-            <div class="field-container">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                name="password"
-                id="password"
-              />
-            </div>
-
-            <div class="field-container">
-              <button class="login-btn" id="loginButton">Log In</button>
-            </div>
+          <div class="field-confirmation-container">
+            <!-- <input type="checkbox" name="confirm" id="payment_confirm" /> -->
+            <label for="confirm"
+              >By submitting you confirm that you have paid the amount</label
+            >
           </div>
-          <div class="no-account">
-            <span>Don't have an account?</span>
-            <a href="signup.html" id="signup_page_link">Sign Up</a>
+          <div class="submit-button-container">
+            <button id="paymentButton">Submit</button>
           </div>
         </div>
       </div>
@@ -124,6 +116,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/nav.js"></script>
-    <script src="scripts/login.js"></script>
+    <script src="scripts/payment.js"></script>
   </body>
 </html>
