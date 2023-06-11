@@ -92,7 +92,9 @@
               />
             </div>
             <div class="profile-name">
-              <h3>John Doe</h3>
+              <h3 id="profile_name">
+                <i>Loading...</i>
+              </h3>
             </div>
           </div>
           <div class="menu">
@@ -103,7 +105,9 @@
               <li id="class_btn">
                 <a href="dashboard.html#classes">My Classes</a>
               </li>
-              <li><a href="dashboard.html#logout">Logout</a></li>
+              <li id="logout_btn">
+                <a href="dashboard.html#logout">Logout</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -118,34 +122,33 @@
               <table>
                 <tr>
                   <td>Name</td>
-                  <td>John Doe</td>
-                </tr>
-                <tr>
-                  <td>Roll No.</td>
-                  <td>123456789</td>
+                  <td id="profile_table_name"><i>Loading...</i></td>
                 </tr>
                 <tr>
                   <td>Payment Status</td>
-                  <td>Pending</td>
+                  <td id="profile_table_payment_status"><i>Loading...</i></td>
                 </tr>
                 <tr>
                   <td>Plan</td>
-                  <td>Standard</td>
+                  <td id="profile_table_plan"><i>Loading..</i></td>
                 </tr>
                 <tr>
                   <td>Address</td>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatibus, quibusdam.
+                  <td id="profile_table_address">
+                    <i>Loading...</i>
                   </td>
                 </tr>
                 <tr>
                   <td>Phone No.</td>
-                  <td>1234567890</td>
+                  <td id="profile_table_phone">
+                    <i>Loading...</i>
+                  </td>
                 </tr>
                 <tr>
                   <td>Email</td>
-                  <td>mail@test.com</td>
+                  <td id="profile_table_email">
+                    <i>Loading...</i>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -154,7 +157,7 @@
           <div class="class-container hide" id="class_view">
             <div class="heading">My Classes</div>
             <div class="meta">
-              <div class="month-year">
+              <!-- <div class="month-year">
                 <select name="month" id="month">
                   <option value="jan">January</option>
                   <option value="feb">February</option>
@@ -175,10 +178,11 @@
                 </select>
 
                 <button class="today">Today</button>
-              </div>
+              </div> -->
             </div>
 
             <div class="calender-container">
+              <h6></h6>
               <div class="day" id="day1">
                 <div class="date-cont">
                   <div class="date">1</div>
@@ -189,127 +193,16 @@
                     <tr>
                       <td>Class link</td>
                       <td>
-                        <a
-                          href="https://meet.google.com/hik-wgky-ijc"
-                          target="_blank"
-                          >https://meet.google.com/hik-wgky-ijc</a
-                        >
+                        <i>Loading...</i>
                       </td>
                     </tr>
                     <tr>
                       <td>Class time</td>
-                      <td>10:00 AM - 11:00 AM</td>
+                      <td><i>Loading...</i></td>
                     </tr>
                     <tr>
                       <td>Teacher</td>
-                      <td>Jane Doe</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="day" id="day1">
-                <div class="date-cont">
-                  <div class="date">2</div>
-                  <div class="month">June</div>
-                </div>
-                <div class="class-data-container">
-                  <table>
-                    <tr>
-                      <td>Class link</td>
-                      <td>
-                        <a
-                          href="https://meet.google.com/hik-wgky-ijc"
-                          target="_blank"
-                          >https://meet.google.com/hik-wgky-ijc</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Class time</td>
-                      <td>10:00 AM - 11:00 AM</td>
-                    </tr>
-                    <tr>
-                      <td>Teacher</td>
-                      <td>Jane Doe</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="day" id="day1">
-                <div class="date-cont">
-                  <div class="date">3</div>
-                  <div class="month">June</div>
-                </div>
-                <div class="class-data-container">
-                  <table>
-                    <tr>
-                      <td>Class link</td>
-                      <td>
-                        <a
-                          href="https://meet.google.com/hik-wgky-ijc"
-                          target="_blank"
-                          >https://meet.google.com/hik-wgky-ijc</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Class time</td>
-                      <td>10:00 AM - 11:00 AM</td>
-                    </tr>
-                    <tr>
-                      <td>Teacher</td>
-                      <td>Jane Doe</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="day" id="day1">
-                <div class="date-cont">
-                  <div class="date">4</div>
-                  <div class="month">June</div>
-                </div>
-                <div class="class-data-container">
-                  <table>
-                    <tr>
-                      <td>Class link</td>
-                      <td>
-                        <a
-                          href="https://meet.google.com/hik-wgky-ijc"
-                          target="_blank"
-                          >https://meet.google.com/hik-wgky-ijc</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Class time</td>
-                      <td>10:00 AM - 11:00 AM</td>
-                    </tr>
-                    <tr>
-                      <td>Teacher</td>
-                      <td>Jane Doe</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="day" id="day1">
-                <div class="date-cont">
-                  <div class="date">5</div>
-                  <div class="month">June</div>
-                </div>
-                <div class="class-data-container">
-                  <table>
-                    <tr>
-                      <td>Class link</td>
-                      <td>TBA</td>
-                    </tr>
-                    <tr>
-                      <td>Class time</td>
-                      <td>TBA</td>
-                    </tr>
-                    <tr>
-                      <td>Teacher</td>
-                      <td>TBA</td>
+                      <td><i> Loading... </i></td>
                     </tr>
                   </table>
                 </div>

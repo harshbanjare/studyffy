@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FPG06VQL7M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-FPG06VQL7M");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studyffy | Students Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/admin.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <!-- query-->
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="logo">
+        <a href="/"><img src="assets/images/logosmall.JPG" alt="logo" /></a>
+      </div>
+      <h3 class="teacher-panel-nav">Teacher's Panel</h3>
+    </div>
+
+    <div class="dashboard-container">
+      <div class="dashboard">
+        <div class="sidebar">
+          <div class="profile">
+            <div class="profile-pic">
+              <img
+                src="https://www.iconpacks.net/icons/2/free-settings-icon-3110-thumb.png"
+                width="100"
+                ="profile pic"
+              />
+            </div>
+            <div class="profile-name">
+              <h3>Teacher's Panel</h3>
+            </div>
+          </div>
+          <div class="menu">
+            <ul>
+              <li id="all_students_btn" onclick="show_all_students()">
+                <a href="#">All Students</a>
+              </li>
+              <li id="set_class_btn" class="active" onclick="show_set_class()">
+                <a href="#">Set Class</a>
+              </li>
+              <!-- <li><a href="#">Mark Attendance</a></li> -->
+              <li><button>Logout</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main">
+          <div class="all-student-container hide" id="all_student_view">
+            <div class="heading">
+              <h2>All Students</h2>
+            </div>
+            <div class="tab-container">
+              <button
+                class="tab"
+                id="registered_students_tab"
+                onclick="show_registered_students()"
+              >
+                Registered Students
+              </button>
+              <button
+                class="tab active"
+                id="pending_students_tab"
+                onclick="show_pending_students()"
+              >
+                Pending Students
+              </button>
+              <button
+                class="tab"
+                id="verified_students_tab"
+                onclick="show_verified_students()"
+              >
+                Verified Students
+              </button>
+            </div>
+
+            <div
+              class="registered-student-container hideTable"
+              id="registered_students"
+            >
+              <table class="registered-student-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Address</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td>Address</td>
+                  </tr>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td>Address</td>
+                  </tr>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td>Address</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pending-student-container" id="pending_students">
+              <table class="pending-student-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Payment Info</th>
+                    <th>Action</th>
+                    <th>Plan</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td>test@ybl</td>
+                    <td>
+                      <button class="accept">Approve</button>
+                    </td>
+                    <td>Basic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              class="verified-student-container hideTable"
+              id="verified_students"
+            >
+              <table class="verified-student-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Plan</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td>Basic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="set-class-container" id="set_class_view">
+            <dialog id="set_class_modal">
+              <div class="heading">
+                <h2>Set Class</h2>
+              </div>
+              <div class="form">
+                <div class="field-container">
+                  <label for="Name">Student Name</label>
+                  <input
+                    type="text"
+                    name="Name"
+                    id="Name"
+                    value="Standard Student"
+                    disabled
+                  />
+                </div>
+                <div class="field-container">
+                  <label for="roll">Roll No</label>
+                  <input type="text" name="roll" id="roll" value="1" disabled />
+                </div>
+                <div class="field-container">
+                  <label for="Date">Set Date</label>
+                  <input type="date" name="Date" id="Date" />
+                </div>
+                <div class="field-container">
+                  <label for="time"> Set Time</label>
+                  <input
+                    type="text"
+                    name="time"
+                    id="time"
+                    placeholder="11AM - 12PM"
+                  />
+                </div>
+                <div class="field-container">
+                  <label for="teacher">Teacher Name</label>
+                  <input
+                    type="text"
+                    name="teacher"
+                    id="teacher"
+                    placeholder="Enter Teacher's Name"
+                  />
+                </div>
+                <div class="field-container">
+                  <label for="class">Class Link</label>
+                  <input
+                    type="text"
+                    name="class"
+                    id="class"
+                    placeholder="Enter Class Link"
+                  />
+                </div>
+
+                <div class="button-container">
+                  <button>SET CLASS</button>
+                  <button onclick="close_class_modal()">Cancel</button>
+                </div>
+              </div>
+            </dialog>
+
+            <div class="heading">
+              <h2>Set Class</h2>
+            </div>
+
+            <div class="tab-container">
+              <button
+                class="tab"
+                id="basic_students_tab"
+                onclick="show_basic_student()"
+              >
+                Basic
+              </button>
+              <button
+                onclick="show_standard_student()"
+                class="tab active"
+                id="standard_students_tab"
+              >
+                Standard
+              </button>
+              <button
+                class="tab"
+                onclick="show_premium_student()"
+                id="premium_students_tab"
+              >
+                Premium
+              </button>
+              <button
+                onclick="show_special_student()"
+                class="tab"
+                id="special_students_tab"
+              >
+                Special
+              </button>
+            </div>
+
+            <div class="basic-class-container hideTable" id="basic_students">
+              <table class="basic-class-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Set Class</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Basic Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td><button>Set</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="standard-class-container" id="standard_students">
+              <table class="standard-class-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Set Class</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>standard Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td><button>Set</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              class="premium-class-container hideTable"
+              id="premium_students"
+            >
+              <table class="premium-class-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Set Class</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>premium Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td><button>Set</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              class="special-class-container hideTable"
+              id="special_students"
+            >
+              <table class="special-class-table">
+                <!--heading-->
+                <thead>
+                  <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Set Class</th>
+                  </tr>
+                </thead>
+                <!--body-->
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>special Doe</td>
+                    <td>mail@test.com</td>
+                    <td>1234567890</td>
+                    <td><button>Set</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/dashboard.js"></script>
+    <script>
+      // document.getElementById("set_class_modal").showModal();
+    </script>
+    <script src="scripts/admin.js"></script>
+  </body>
+</html>
