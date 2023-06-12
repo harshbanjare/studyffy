@@ -174,4 +174,14 @@ window.onload = async () => {
   } else {
     render_classes(classes);
   }
+
+  document.querySelector("#show_sidebar").addEventListener("click", () => {
+    document.querySelector(".sidebar").classList.toggle("active");
+    document.querySelector("#show_sidebar").style.opacity = "0";
+  });
+
+  document.querySelector("#hide_sidebar").addEventListener("click", () => {
+    document.querySelector(".sidebar").classList.toggle("active");
+    document.querySelector("#show_sidebar").style.opacity = "1";
+  });
 };
