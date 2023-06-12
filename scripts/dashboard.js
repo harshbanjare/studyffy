@@ -117,7 +117,7 @@ const render_classes = (classes) => {
             <tr>
               <td>Class link</td>
               <td>
-                <a href="${class_.class_link}" target="_blank">${class_.class_link}</a>
+                <a href="${class_.class_link}" target="_blank">Open Class</a>
               </td>
             </tr>
             <tr>
